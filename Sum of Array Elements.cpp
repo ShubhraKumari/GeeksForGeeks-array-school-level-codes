@@ -1,11 +1,46 @@
-vector<vector<int>> transpose(int a[][M], int n)
+//{ Driver Code Starts
+//Initial Template for C++
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+//User function Template for C++
+
+//Complete this function
+
+int sumElement(int arr[],int n)
 {
-    // Code here
-    vector<vector<int>> v(M,vector<int>(M));
-    for(int i=0;i<M;i++){
-        for(int j=0;j<M;j++){
-           v[i][j]=a[j][i];
-        }
+    //Your code here
+    int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        sum+=arr[i];
     }
-    return v;
+    return sum;
 }
+
+
+
+
+//{ Driver Code Starts.
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    int arr[n];
+	    for(int i=0;i<n;i++)
+	    cin>>arr[i];
+	    
+	    cout<<sumElement(arr,n)<<endl;
+	    
+	}
+	return 0;
+}
+// } Driver Code Ends
